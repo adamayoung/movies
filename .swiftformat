@@ -1,0 +1,9 @@
+--typeblanklines preserve
+--indent 4
+--commas inline
+--self init-only
+--wraparguments before-first
+--xcodeindentation enabled
+
+--disable wrapMultilineStatementBraces
+--disable redundantLetError
