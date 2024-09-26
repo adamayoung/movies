@@ -9,15 +9,36 @@ import SwiftUI
 
 struct TopRatedMoviesView: View {
 
+    @State private var viewModel: TopRatedMoviesViewModel
+
+    init(viewModel: TopRatedMoviesViewModel) {
+        self._viewModel = State(initialValue: viewModel)
+    }
+
     var body: some View {
-        Text("TOP_RATED_MOVIES")
+        MovieCollectionView(viewModel: viewModel)
+            .movieCollectionStyle(.grid)
             .navigationTitle("TOP_RATED")
     }
 
 }
 
-#Preview {
+#Preview("Top Rated Movies") {
     NavigationStack {
-        TopRatedMoviesView()
+        TopRatedMoviesView(
+            viewModel: TopRatedMoviesViewModel(
+                dependencies: .mock()
+            )
+        )
+    }
+}
+
+#Preview("No Content") {
+    NavigationStack {
+        TopRatedMoviesView(
+            viewModel: TopRatedMoviesViewModel(
+                dependencies: .mock(movies: [])
+            )
+        )
     }
 }

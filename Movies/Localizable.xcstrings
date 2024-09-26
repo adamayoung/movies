@@ -61,9 +61,6 @@
         }
       }
     },
-    "Movie Series %lld" : {
-
-    },
     "MOVIES" : {
       "localizations" : {
         "en" : {
@@ -74,22 +71,22 @@
         }
       }
     },
+    "NO_MOVIES" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No Movies"
+          }
+        }
+      }
+    },
     "NOW_PLAYING" : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Now Playing"
-          }
-        }
-      }
-    },
-    "NOW_PLAYING_MOVIES" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Now Playing Movies"
           }
         }
       }
@@ -124,16 +121,6 @@
         }
       }
     },
-    "POPULAR_MOVIES" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Popular Movies"
-          }
-        }
-      }
-    },
     "POPULAR_PEOPLE" : {
       "localizations" : {
         "en" : {
@@ -154,6 +141,16 @@
         }
       }
     },
+    "THERE_ARENT_ANY_MOVIES_AT_THE_MOMENT" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "There aren’t any movies at the moment."
+          }
+        }
+      }
+    },
     "TOP_RATED" : {
       "localizations" : {
         "en" : {
@@ -165,6 +162,7 @@
       }
     },
     "TOP_RATED_MOVIES" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -215,6 +213,7 @@
       }
     },
     "UPCOMING_MOVIES" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {

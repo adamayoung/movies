@@ -9,15 +9,36 @@ import SwiftUI
 
 struct UpcomingMoviesView: View {
 
+    @State private var viewModel: UpcomingMoviesViewModel
+
+    init(viewModel: UpcomingMoviesViewModel) {
+        self._viewModel = State(initialValue: viewModel)
+    }
+
     var body: some View {
-        Text("UPCOMING_MOVIES")
+        MovieCollectionView(viewModel: viewModel)
+            .movieCollectionStyle(.grid)
             .navigationTitle("UPCOMING")
     }
 
 }
 
-#Preview {
+#Preview("Upcoming Movies") {
     NavigationStack {
-        NowPlayingMoviesView()
+        UpcomingMoviesView(
+            viewModel: UpcomingMoviesViewModel(
+                dependencies: .mock()
+            )
+        )
+    }
+}
+
+#Preview("No Content") {
+    NavigationStack {
+        UpcomingMoviesView(
+            viewModel: UpcomingMoviesViewModel(
+                dependencies: .mock(movies: [])
+            )
+        )
     }
 }

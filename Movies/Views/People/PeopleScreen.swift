@@ -32,10 +32,10 @@ enum PeopleScreen: Codable, Hashable, Identifiable {
         }
     }
 
-    @ViewBuilder var destination: some View {
+    @ViewBuilder @MainActor var destination: some View {
         switch self {
         case .popular:
-            PopularMoviesView()
+            PopularPeopleView()
 
         case let .details(id):
             PersonView(id: id)

@@ -41,7 +41,7 @@ enum AppScreen: Codable, Hashable, Identifiable, CaseIterable {
         }
     }
 
-    @ViewBuilder var destination: some View {
+    @ViewBuilder @MainActor var destination: some View {
         switch self {
         case .home:
             HomeNavigationStack()

@@ -9,15 +9,36 @@ import SwiftUI
 
 struct NowPlayingMoviesView: View {
 
+    @State private var viewModel: NowPlayingMoviesViewModel
+
+    init(viewModel: NowPlayingMoviesViewModel) {
+        self._viewModel = State(initialValue: viewModel)
+    }
+
     var body: some View {
-        Text("NOW_PLAYING_MOVIES")
+        MovieCollectionView(viewModel: viewModel)
+            .movieCollectionStyle(.grid)
             .navigationTitle("NOW_PLAYING")
     }
 
 }
 
-#Preview {
+#Preview("Now Playing Movies") {
     NavigationStack {
-        NowPlayingMoviesView()
+        NowPlayingMoviesView(
+            viewModel: NowPlayingMoviesViewModel(
+                dependencies: .mock()
+            )
+        )
+    }
+}
+
+#Preview("No Content") {
+    NavigationStack {
+        NowPlayingMoviesView(
+            viewModel: NowPlayingMoviesViewModel(
+                dependencies: .mock(movies: [])
+            )
+        )
     }
 }

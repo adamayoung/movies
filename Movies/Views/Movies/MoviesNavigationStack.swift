@@ -11,7 +11,7 @@ struct MoviesNavigationStack: View {
 
     var body: some View {
         NavigationStack {
-            MoviesHomeView()
+            MoviesHomeView(viewModel: MoviesHomeViewModel(dependencies: DIContainer.shared.moviesHome()))
                 .navigationDestinations()
         }
     }

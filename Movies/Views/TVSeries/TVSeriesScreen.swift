@@ -41,7 +41,7 @@ enum TVSeriesScreen: Codable, Hashable, Identifiable {
         }
     }
 
-    @ViewBuilder var destination: some View {
+    @ViewBuilder @MainActor var destination: some View {
         switch self {
         case .popular:
             PopularTVSeriesView()
